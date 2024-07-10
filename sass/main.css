@@ -382,6 +382,49 @@ header .header__arrow {
   background-image: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
 }
 
+.heart-bloc {
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.heart-bloc .heart-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heart-bloc .heart {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.heart-bloc:hover > .heart {
+  opacity: 0;
+  transition: opacity 300ms;
+  transition-delay: 200ms;
+}
+
+.heart-bloc:hover > .heart-gradient {
+  opacity: 1;
+  transition: opacity 500ms;
+  transform-origin: center bottom;
+  animation-name: anim-heart;
+  animation-duration: 500ms;
+}
+
+.heart-bloc:not(:focus) > .heart-gradient {
+  transition: opacity 500ms;
+}
+
 /*******footer*****/
 footer {
   font-family: "Roboto";
