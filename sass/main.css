@@ -585,6 +585,17 @@ footer .logo {
   transition: 0.5s ease;
 }
 
+.heart-bloc .heart-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .menus .title .heart input:checked + label:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
