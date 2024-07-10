@@ -348,15 +348,16 @@ header .header__arrow {
 	position: relative;
   } 
 
-
-
   .heart-bloc {
     width: 22px;
     height: 22px;
     font-size: 22px;
-    position: relative;
+    position: absolute; /* Changez de relative à absolute */
+    top: 10px; /* Ajustez la position verticale selon vos besoins */
+    right: 10px; /* Déplacez vers la droite */
     cursor: pointer;
-  }
+}
+
   .heart-bloc .heart-gradient {
     position: absolute;
     top: 0px;
@@ -613,7 +614,21 @@ footer .logo {
   animation: appear 1s both;
 }
 
+.menus .container .entry .card:nth-child(0) {
+  animation-delay: 0ms;
+}
 
+.menus .container .entry .card:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.menus .container .entry .card:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.menus .container .entry .card:nth-child(3) {
+  animation-delay: 300ms;
+}
 
 .menus .container .entry .card-item {
   margin: 0;
