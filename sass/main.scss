@@ -93,6 +93,7 @@ h4 {
 
 
 /***********header*******/
+
 header {
   position: relative;
 }
@@ -294,6 +295,7 @@ header .header__arrow {
 }
 
 /**********Restaurant card*******/
+
 .restaurent_card .new {
   position: relative;
 }
@@ -356,7 +358,7 @@ header .header__arrow {
     top: 10px; /* Ajustez la position verticale selon vos besoins */
     right: 10px; /* Déplacez vers la droite */
     cursor: pointer;
-}
+  }
 
   .heart-bloc .heart-gradient {
     position: absolute;
