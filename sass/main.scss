@@ -1,6 +1,6 @@
 @import 'animation';
 @import 'variables';
-@import 'mixin'; // Importation du fichier _mixin.scss
+@import 'mixin'; 
 
 
 
@@ -211,6 +211,9 @@ header .header__arrow {
     margin-left: 10.25rem;
   }
 }
+
+/**********Restaurant card*******/
+
 .restaurent {
   background-color: #f6f6f6;
 }
@@ -231,7 +234,6 @@ header .header__arrow {
   }
 }
 
-/**********Restaurant card*******/
 
 .restaurent_card .new {
   position: relative;
