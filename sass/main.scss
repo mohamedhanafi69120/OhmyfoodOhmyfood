@@ -1,3 +1,10 @@
+@import 'animation';
+@import 'variables';
+@import 'mixin'; 
+
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -20,79 +27,10 @@ h4 {
   margin: 0;
 }
 
-/***********loader******/
-
-@keyframes content-appear {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0);
-  }
-}
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes textclip {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.loader {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  animation: content-appear 1s 3s forwards;
-  transform-origin: top;
-}
-
-.loader::after {
-  content: "Ohmyfood";
-  font-family: "Shrikhand", sans-serif;
-  text-transform: uppercase;
-  background-image: linear-gradient(-225deg, #9356DC 0%, #89C8FA 29%, #ff79da 67%, #fff800 100%);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  animation: textclip 3s linear infinite, rotate 2s linear infinite;
-  display: inline-block;
-  font-size: 3rem;
-  text-align: center;
-}
-
-@keyframes textclip {
-  to {
-    background-position: -300% center;
-  }
-}
 
 
 /***********header*******/
+
 header {
   position: relative;
 }
@@ -273,6 +211,9 @@ header .header__arrow {
     margin-left: 10.25rem;
   }
 }
+
+/**********Restaurant card*******/
+
 .restaurent {
   background-color: #f6f6f6;
 }
@@ -293,7 +234,7 @@ header .header__arrow {
   }
 }
 
-/**********Restaurant card*******/
+
 .restaurent_card .new {
   position: relative;
 }
@@ -348,49 +289,47 @@ header .header__arrow {
 	position: relative;
   } 
 
-  .card-content .heart,
-  .card-content .heart1,
-  .card-content .heart2,
-  .card-content .heart3 {
-	position: absolute;
-	right: 3rem;
-	bottom: 3rem;
+  .heart-bloc {
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    position: absolute; /* Changez de relative à absolute */
+    top: 10px; /* Ajustez la position verticale selon vos besoins */
+    right: 10px; /* Déplacez vers la droite */
+    cursor: pointer;
   }
-  
-  .card-content .heart input,
-  .card-content .heart1 input,
-  .card-content .heart2 input,
-  .card-content .heart3 input {
-	display: none;
+
+  .heart-bloc .heart-gradient {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
   }
-  .card-content .heart input + label:before,
-  .card-content .heart1 input + label:before,
-  .card-content .heart2 input + label:before,
-  .card-content .heart3 input + label:before {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 400;
-	content: "\f08a";
-	font-size: x-large;
-	position: absolute;
-	transition: 0.5s ease;
+  .heart-bloc .heart {
+    position: absolute;
+    top: 0px;
+    left: 0px;
   }
-  
-  .card-content .heart input:checked + label:after,
-  .card-content .heart1 input:checked + label:after,
-  .card-content .heart2 input:checked + label:after,
-  .card-content .heart3 input:checked + label:after {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-	content: "\f004";
-	font-size: x-large;
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	position: absolute;
-	transition: 0.5s ease;
-	background-image: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
+  .heart-bloc:hover > .heart {
+    opacity: 0;
+    transition: opacity 300ms;
+    transition-delay: 200ms;
   }
-   
+  .heart-bloc:hover > .heart-gradient {
+    opacity: 1;
+    transition: opacity 500ms;
+    transform-origin: center bottom;
+    animation-name: anim-heart;
+    animation-duration: 500ms;
+  }
+  .heart-bloc:not(:focus) > .heart-gradient {
+    transition: opacity 500ms;
+  }
+
 /*******footer*****/
 
 footer {
@@ -541,31 +480,7 @@ footer .logo {
   gap: 3rem;
 }
 
-.menus .title .heart input {
-  display: none;
-}
 
-.menus .title .heart input + label:before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: x-large;
-  position: absolute;
-  transition: 0.5s ease;
-}
-
-.menus .title .heart input:checked + label:after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: x-large;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: absolute;
-  transition: 0.5s ease;
-  background-image: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
-}
 
 .menus .title h2 {
   margin-bottom: 0;
@@ -614,21 +529,7 @@ footer .logo {
   animation: appear 1s both;
 }
 
-.menus .container .entry .card:nth-child(0) {
-  animation-delay: 0ms;
-}
 
-.menus .container .entry .card:nth-child(1) {
-  animation-delay: 100ms;
-}
-
-.menus .container .entry .card:nth-child(2) {
-  animation-delay: 200ms;
-}
-
-.menus .container .entry .card:nth-child(3) {
-  animation-delay: 300ms;
-}
 
 .menus .container .entry .card-item {
   margin: 0;
