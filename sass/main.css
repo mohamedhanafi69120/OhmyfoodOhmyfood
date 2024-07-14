@@ -22,6 +22,7 @@ h4 {
 }
 
 /***********loader******/
+
 @keyframes content-appear {
   0% {
     opacity: 1;
