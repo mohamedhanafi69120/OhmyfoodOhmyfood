@@ -339,6 +339,7 @@ header .header__arrow {
   position: relative;
 }
 
+/************les heart *************/
 .heart-bloc {
   width: 22px;
   height: 22px;
@@ -381,6 +382,52 @@ header .header__arrow {
 }
 
 .heart-bloc:not(:focus) > .heart-gradient {
+  transition: opacity 500ms;
+}
+
+/**********heart restaurant***********/
+.heart-bloc1 {
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  position: absolute;
+  top: 25px; /* Ajusté pour aligner avec le titre */
+  margin-left: 18rem;
+  cursor: pointer;
+}
+
+.heart-bloc1 .heart-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heart-bloc1 .heart {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.heart-bloc1:hover > .heart {
+  opacity: 0;
+  transition: opacity 300ms;
+  transition-delay: 200ms;
+}
+
+.heart-bloc1:hover > .heart-gradient {
+  opacity: 1;
+  transition: opacity 500ms;
+  transform-origin: center bottom;
+  animation-name: anim-heart;
+  animation-duration: 500ms;
+}
+
+.heart-bloc1:not(:focus) > .heart-gradient {
   transition: opacity 500ms;
 }
 
