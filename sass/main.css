@@ -161,9 +161,17 @@ header .header__arrow {
   transition: opacity 300ms ease-in-out;
 }
 
-.headline button:hover {
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+.Booking__btn {
+  width: 50%;
+  min-width: 150px;
+  max-width: 250px;
 }
+
+.Booking__btn:hover {
+  opacity: 0.88;
+  box-shadow: 0 4px 10px 0 #afafaf;
+}
+
 
 /****localisation******/
 .info__location {
@@ -675,6 +683,16 @@ footer .logo {
   margin-top: 2rem;
 }
 
+.order button {
+  width: 50%;
+  min-width: 150px;
+  max-width: 250px;
+}
+
 .order button:hover {
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-}/*# sourceMappingURL=main.css.map */
+  opacity: 0.88;
+  box-shadow: 0 4px 10px 0 #afafaf;
+}
+
+
+/*# sourceMappingURL=main.css.map */
