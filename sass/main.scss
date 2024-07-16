@@ -1,11 +1,10 @@
 @import 'animation';
 @import 'variables';
-@import 'mixin'; 
 
 
 
 
-@charset "UTF-8";
+
 * {
   box-sizing: border-box;
 }
@@ -27,9 +26,6 @@ section {
 h4 {
   margin: 0;
 }
-
-
-
 
 
 /***********header*******/
@@ -284,64 +280,25 @@ header .header__arrow {
 
 /************les heart *************/
 
-.heart-bloc {
+.heart-bloc, .heart-bloc1 {
   width: 22px;
   height: 22px;
   font-size: 22px;
-  position: absolute; /* Changez de relative à absolute */
-  top: 10px; /* Ajustez la position verticale selon vos besoins */
-  right: 10px; /* Déplacez vers la droite */
+  position: absolute;
   cursor: pointer;
 }
 
-.heart-bloc .heart-gradient {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0;
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.heart-bloc {
+  top: 10px; /* Positionnement spécifique pour les cœurs des images */
+  right: 10px;
 }
-
-.heart-bloc .heart {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.heart-bloc:hover > .heart {
-  opacity: 0;
-  transition: opacity 300ms;
-  transition-delay: 200ms;
-}
-
-.heart-bloc:hover > .heart-gradient {
-  opacity: 1;
-  transition: opacity 500ms;
-  transform-origin: center bottom;
-  animation-name: anim-heart;
-  animation-duration: 500ms;
-}
-
-.heart-bloc:not(:focus) > .heart-gradient {
-  transition: opacity 500ms;
-}
-
-/**********heart restaurant***********/
 
 .heart-bloc1 {
-  width: 22px;
-  height: 22px;
-  font-size: 22px;
-  position: absolute;
-  top: 25px; /* Ajusté pour aligner avec le titre */
+  top: 25px; /* Positionnement spécifique pour les cœurs du titre */
   margin-left: 18rem;
-  cursor: pointer;
 }
 
-.heart-bloc1 .heart-gradient {
+.heart-bloc .heart-gradient, .heart-bloc1 .heart-gradient {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -352,19 +309,19 @@ header .header__arrow {
   color: transparent;
 }
 
-.heart-bloc1 .heart {
+.heart-bloc .heart, .heart-bloc1 .heart {
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
-.heart-bloc1:hover > .heart {
+.heart-bloc:hover > .heart, .heart-bloc1:hover > .heart {
   opacity: 0;
   transition: opacity 300ms;
   transition-delay: 200ms;
 }
 
-.heart-bloc1:hover > .heart-gradient {
+.heart-bloc:hover > .heart-gradient, .heart-bloc1:hover > .heart-gradient {
   opacity: 1;
   transition: opacity 500ms;
   transform-origin: center bottom;
@@ -372,7 +329,7 @@ header .header__arrow {
   animation-duration: 500ms;
 }
 
-.heart-bloc1:not(:focus) > .heart-gradient {
+.heart-bloc:not(:focus) > .heart-gradient, .heart-bloc1:not(:focus) > .heart-gradient {
   transition: opacity 500ms;
 }
 
