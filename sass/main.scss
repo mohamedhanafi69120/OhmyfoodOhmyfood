@@ -2,9 +2,6 @@
 @import 'variables';
 
 
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -603,33 +600,4 @@ footer .logo {
   border-radius: 50%;
 }
 
-.order {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.order button {
-  border: none;
-  color: rgba(255, 255, 255, 0.886);
-  width: 11.625rem;
-  height: 3.125rem;
-  flex-shrink: 0;
-  border-radius: 1.5625rem;
-  background: linear-gradient(to top, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  transition: 600ms ease;
-  margin-top: 2rem;
-}
-
-
-.order button {
-  width: 50%;
-  min-width: 150px;
-  max-width: 250px;
-}
-
-.order button:hover {
-  opacity: 0.88;
-  box-shadow: 0 4px 10px 0 #afafaf;
-}
