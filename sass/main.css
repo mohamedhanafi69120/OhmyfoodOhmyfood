@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 * {
   box-sizing: border-box;
 }
@@ -115,6 +115,7 @@ header .header__arrow {
 }
 
 /*****Booking*******/
+
 .Booking {
   display: flex;
   flex-direction: column;
@@ -174,6 +175,7 @@ header .header__arrow {
 
 
 /****localisation******/
+
 .info__location {
   display: flex;
   height: 50px;
@@ -195,6 +197,7 @@ header .header__arrow {
 }
 
 /************fonctionnement***********/
+
 .fonctionnement {
   font-family: "Roboto";
   counter-reset: my-sec-counter;
@@ -515,7 +518,8 @@ footer .logo {
 }
 
 
-/*********les 4 menu restaurants*****/
+
+/*********les 4 menu restaurants*****************/
 
 .menu-cover {
   width: 100%;
