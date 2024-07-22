@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -115,7 +115,6 @@ header .header__arrow {
 }
 
 /*****Booking*******/
-
 .Booking {
   display: flex;
   flex-direction: column;
@@ -163,7 +162,6 @@ header .header__arrow {
 }
 
 .Booking__btn {
-  width: 50%;
   min-width: 150px;
   max-width: 250px;
 }
@@ -173,9 +171,7 @@ header .header__arrow {
   box-shadow: 0 4px 10px 0 #afafaf;
 }
 
-
 /****localisation******/
-
 .info__location {
   display: flex;
   height: 50px;
@@ -197,16 +193,39 @@ header .header__arrow {
 }
 
 /************fonctionnement***********/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 .fonctionnement {
   font-family: "Roboto";
   counter-reset: my-sec-counter;
   flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.fonctionnement li::before {
+  counter-increment: my-sec-counter;
+  content: counter(my-sec-counter);
+  background-color: #9356dc;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  border-radius: 50%;
+  transform: translatey(-50%);
 }
 
 @media (min-width: 767px) {
   .fonctionnement {
-    padding: 3.125rem 11.25rem;
+    padding: 3rem 2rem;
   }
 }
 .fonctionnement ol {
@@ -235,34 +254,6 @@ header .header__arrow {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-.fonctionnement li i {
-  color: black;
-  padding: 0.5rem;
-  padding-left: 1rem;
-}
-
-.fonctionnement li .micon {
-  color: #7e7e7e;
-}
-
-.fonctionnement li::before {
-  counter-increment: my-sec-counter;
-  content: counter(my-sec-counter);
-  background-color: #9356dc;
-  color: white;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  position: absolute;
-  left: -1rem;
-  top: 50%;
-  border-radius: 50%;
-  transform: translatey(-50%);
-}
-
-.fonctionnement .iconcolor {
-  color: #9356dc;
-}
-
 @media (max-width: 767px) {
   .fonctionnement .title {
     margin-right: 1.25rem;
@@ -278,26 +269,31 @@ header .header__arrow {
     margin-left: 10.25rem;
   }
 }
-.restaurent {
-  background-color: #f6f6f6;
+.fonctionnement li i {
+  color: black;
+  padding: 0.5rem;
+  padding-left: 1rem;
 }
 
-.restaurent_card {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  margin: 1rem;
+.fonctionnement li .micon {
+  color: #7e7e7e;
 }
 
-@media (min-width: 768px) {
-  .restaurent_card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-left: 11.25rem;
-    margin-right: 11.25rem;
+.fonctionnement .iconcolor {
+  color: #9356dc;
+}
+
+@media (max-width: 768px) {
+  .fonctionnement h3 {
+    font-size: 15px;
   }
 }
-/**********Restaurant card*******/
+/****************RESTAURANT**************/
+.restaurent {
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 40px 0;
+}
 
 .restaurent_card .new {
   position: relative;
@@ -320,6 +316,16 @@ header .header__arrow {
   background: #99E2D0;
 }
 
+.card__image img {
+  height: 15rem;
+  background-size: cover;
+  width: 100%;
+  border-top-right-radius: 0.9375rem;
+  border-top-left-radius: 0.9375rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .card {
   border-radius: 0.9375rem;
   background-color: white;
@@ -330,14 +336,6 @@ header .header__arrow {
 
 .card-title {
   font-family: "Roboto";
-}
-
-.card__image img {
-  height: 15rem;
-  background-size: cover;
-  width: 100%;
-  border-top-right-radius: 0.9375rem;
-  border-top-left-radius: 0.9375rem;
 }
 
 .card-content {
@@ -352,8 +350,36 @@ header .header__arrow {
   position: relative;
 }
 
-/************les heart *************/
+.restaurent_card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 1200px;
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .restaurent_card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurent_card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+  }
+}
+.restaurent .title {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 22px;
+}
+
+/************les heart *************/
 .heart-bloc, .heart-bloc1 {
   width: 22px;
   height: 22px;
@@ -408,121 +434,110 @@ header .header__arrow {
 }
 
 /*******footer*****/
-
-footer {
-  font-family: "Roboto";
-  background-color: #353535;
-  color: white;
-  display: flex;
-  padding: 1.375rem 1.5625rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+.footer {
+  width: 100%;
+  padding: 22px 25px;
+  background-color: #404040;
+  color: #ffffff;
+  font-family: "";
 }
 
-footer p {
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-  footer {
-    flex-direction: row;
+@media all and (min-width: 768px) {
+  .footer {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-  }
-  footer :nth-child(1) {
-    order: 5;
-  }
-  footer .logo {
-    padding-left: 2rem;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    height: 114px;
+    gap: 16px;
   }
 }
-footer i {
-  padding-right: 1rem;
+.footer p {
+  margin: 5px 0;
 }
 
-footer .logo {
-  font-family: "Shrikhand";
+.footer__logo {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-family: "Shrikhand", cursive;
 }
 
-.section-title {
-  padding: 1rem;
-}
-
-@media (min-width: 768px) {
-  .section-title {
-    margin-left: 10.25rem;
+@media all and (min-width: 1024px) {
+  .footer__logo {
+    width: 137px;
+    margin: 0;
   }
 }
-.restaurent {
-  background-color: #f6f6f6;
-}
-
-.restaurent_card {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  margin: 1rem;
-}
-
-@media (min-width: 768px) {
-  .restaurent_card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-left: 11.25rem;
-    margin-right: 11.25rem;
+@media all and (min-width: 768px) {
+  .footer__logo {
+    width: 137px;
+    margin: 0;
   }
 }
-.restaurent_card .new {
-  position: relative;
+.footer__bloc {
+  display: flex;
+  flex-direction: column;
 }
 
-.restaurent_card .new::before {
-  width: 5rem;
-  height: 1.8125rem;
-  flex-shrink: 0;
-  border-radius: 0.125rem;
-  text-align: center;
+@media all and (min-width: 768px) {
+  .footer__bloc {
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+  }
+}
+.footer__nav {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 7px;
+}
+
+@media all and (min-width: 768px) {
+  .footer__nav {
+    width: 190px;
+  }
+}
+.footer__nav--icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  content: "Nouveau";
-  top: 1rem;
-  right: 1rem;
-  color: #008766;
-  background: #99E2D0;
+  width: 16px;
+  height: 13px;
+  font-size: 13px;
 }
 
-.card {
-  border-radius: 0.9375rem;
-  background-color: white;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+@media all and (min-width: 768px) {
+  .footer__nav--info p {
+    width: 112px;
+    height: 20px;
+  }
 }
-
-.card-title {
-  font-family: "Roboto";
-}
-
-.card__image img {
-  height: 15rem;
-  background-size: cover;
-  width: 100%;
-  border-top-right-radius: 0.9375rem;
-  border-top-left-radius: 0.9375rem;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-
-
 /*********les 4 menu restaurants*****************/
-
 .menu-cover {
   width: 100%;
+}
+
+header {
+  position: relative;
+}
+
+header h1 {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--White, #fff);
+  color: black;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
+  margin: 0;
+}
+
+header .header__arrow {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -541,7 +556,6 @@ footer .logo {
   position: relative;
   border-top-right-radius: 2.5rem;
   border-top-left-radius: 2.5rem;
-  padding-bottom: 3rem;
   margin-top: -4rem;
   background: #f6f6f6;
   overflow: hidden; /* Ensure content stays within the container */
@@ -585,7 +599,6 @@ footer .logo {
     transform: translateY(0);
   }
 }
-
 .menus .container .entry:nth-of-type(1) {
   animation-delay: 0.5s;
 }
@@ -636,22 +649,54 @@ footer .logo {
 
 .menus .container .entry .card-item {
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
+/* Pour les écrans de taille smartphone (320px) */
+@media (max-width: 767px) {
+  .menus .container .entry .card-item,
+  .menus .container .entry .card-item p,
+  .menus .container .entry .card-item h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 .menus .container .entry .card-item p {
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+  .menus .container .entry .card-item p,
+  .menus .container .entry .card-item h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menus .container .entry .menu-title {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
   .menus .container .entry .card {
-    margin-left: 12rem;
-    margin-right: 12rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+@media (min-width: 1024px) {
+  .menus .container .entry .menu-title {
+    margin-left: 13rem;
+    margin-right: 13rem;
+  }
+  .menus .container .entry .card {
+    margin-left: 13rem;
+    margin-right: 13rem;
   }
 }
 .menus .container .entry .card p,
@@ -694,3 +739,27 @@ footer .logo {
   background: #f6f6f6;
   border-radius: 50%;
 }
+
+/* Par défaut, les ellipses sont désactivées */
+.menu-item {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Pour les écrans de taille smartphone (320px) */
+@media (max-width: 767px) {
+  .menu-item.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* À partir de 768px, les ellipses sont supprimées */
+@media (min-width: 768px) {
+  .menu-item.ellipsis {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}/*# sourceMappingURL=main.css.map */
