@@ -24,73 +24,85 @@ h4 {
 /***********loader******/
 
 @keyframes content-appear {
+  
   0% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 1; /* Début de l'animation, complètement visible */
+    transform: scale(1); /* Taille normale */
   }
   100% {
-    opacity: 0;
-    transform: scale(0);
+    opacity: 0; /* Fin de l'animation, complètement invisible */
+    transform: scale(0); /* Réduit à zéro */
   }
 }
+
 @keyframes appear {
+  /* Définir une animation pour faire apparaître le contenu avec une mise à l'échelle */
   0% {
-    transform: scale(0);
+    transform: scale(0); /* Début de l'animation, réduit à zéro */
   }
   100% {
-    transform: scale(1);
+    transform: scale(1); /* Fin de l'animation, taille normale */
   }
 }
+
 @keyframes textclip {
+  /* Définir une animation pour déplacer l'arrière-plan du texte */
   0% {
-    background-position: 0% center;
+    background-position: 0% center; /* Position de départ du fond */
   }
   100% {
-    background-position: -200% center;
+    background-position: -200% center; /* Position finale du fond, se déplace de 200% */
   }
 }
+
 @keyframes rotate {
+  /* Définir une animation pour faire tourner le contenu */
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Début de l'animation, pas de rotation */
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Fin de l'animation, rotation complète */
   }
 }
+
 .loader {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  animation: content-appear 1s 3s forwards;
-  transform-origin: top;
+  /* Styles pour le conteneur de chargement */
+  position: fixed; /* Positionnement fixe par rapport à la fenêtre */
+  height: 100vh; /* Hauteur pleine */
+  width: 100%; /* Largeur pleine */
+  inset: 0; /* Positionné en haut, à droite, en bas et à gauche */
+  background-color: rgba(255, 255, 255, 0.95); /* Couleur de fond blanc avec opacité de 95% */
+  z-index: 1; /* Placer le loader au-dessus des autres éléments */
+  display: grid; /* Utilisation de la grille pour centrer le contenu */
+  place-items: center; /* Centrer le contenu à l'intérieur de la grille */
+  animation: content-appear 1s 3s forwards; /* Appliquer l'animation content-appear, durée de 1s, après un délai de 3s, avance vers l'état final */
+  transform-origin: top; /* Point d'origine de la transformation en haut */
 }
 
 .loader::after {
-  content: "Ohmyfood";
-  font-family: "Shrikhand", sans-serif;
-  text-transform: uppercase;
-  background-image: linear-gradient(-225deg, #9356DC 0%, #89C8FA 29%, #ff79da 67%, #fff800 100%);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  animation: textclip 3s linear infinite, rotate 2s linear infinite;
-  display: inline-block;
-  font-size: 3rem;
-  text-align: center;
+  /* Styles pour le texte "Ohmyfood" affiché après le conteneur de chargement */
+  content: "Ohmyfood"; /* Contenu textuel */
+  font-family: "Shrikhand", sans-serif; /* Police de caractères */
+  text-transform: uppercase; /* Convertir le texte en majuscules */
+  background-image: linear-gradient(-225deg, #9356DC 0%, #89C8FA 29%, #ff79da 67%, #fff800 100%); /* Dégradé de couleurs pour l'arrière-plan du texte */
+  background-size: 200% auto; /* Taille de l'arrière-plan */
+  background-clip: text; /* Utiliser l'arrière-plan pour remplir le texte */
+  -webkit-background-clip: text; /* Support pour Webkit */
+  -webkit-text-fill-color: transparent; /* Rendre le texte transparent pour voir le dégradé */
+  color: transparent; /* Rendre le texte transparent */
+  animation: textclip 3s linear infinite, rotate 2s linear infinite; /* Appliquer les animations textclip et rotate */
+  display: inline-block; /* Afficher en bloc en ligne */
+  font-size: 3rem; /* Taille de police */
+  text-align: center; /* Aligner le texte au centre */
 }
 
 @keyframes textclip {
+  /* Redéfinir l'animation textclip */
   to {
-    background-position: -300% center;
+    background-position: -300% center; /* Position finale du fond, se déplace de 300% */
   }
 }
+
 /***********header*******/
 header {
   position: relative;
@@ -379,58 +391,67 @@ header .header__arrow {
   font-size: 22px;
 }
 
-/************les heart *************/
+/* ********** Les blocs de cœur ********** */
+
+/* Style de base pour les blocs contenant les cœurs */
 .heart-bloc, .heart-bloc1 {
-  width: 22px;
-  height: 22px;
-  font-size: 22px;
-  position: absolute;
-  cursor: pointer;
+  width: 22px; /* Largeur du bloc */
+  height: 22px; /* Hauteur du bloc */
+  font-size: 22px; /* Taille de la police (pour d'éventuels caractères ou icônes de cœur) */
+  position: absolute; /* Positionnement absolu pour placement précis */
+  cursor: pointer; /* Changement du curseur pour indiquer l'interactivité */
 }
 
+/* Positionnement spécifique pour les cœurs des images */
 .heart-bloc {
-  top: 10px; /* Positionnement spécifique pour les cœurs des images */
-  right: 10px;
+  top: 10px; /* Positionnement du haut */
+  right: 10px; /* Positionnement de la droite */
 }
 
+/* Positionnement spécifique pour les cœurs du titre */
 .heart-bloc1 {
-  top: 25px; /* Positionnement spécifique pour les cœurs du titre */
-  margin-left: 18rem;
+  top: 25px; /* Positionnement du haut */
+  margin-left: 18rem; /* Marge à gauche pour ajuster la position */
 }
 
+/* Gradient appliqué aux cœurs */
 .heart-bloc .heart-gradient, .heart-bloc1 .heart-gradient {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0;
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  position: absolute; /* Positionnement absolu pour placement précis */
+  top: 0px; /* Positionnement du haut */
+  left: 0px; /* Positionnement de la gauche */
+  opacity: 0; /* Initialement transparent */
+  background: linear-gradient(#9356DC, #FF79DA); /* Dégradé de couleurs */
+  -webkit-background-clip: text; /* Clip le fond au texte (support Webkit) */
+  background-clip: text; /* Clip le fond au texte */
+  color: transparent; /* Texte transparent pour voir le dégradé */
 }
 
+/* Style de base pour les icônes de cœur */
 .heart-bloc .heart, .heart-bloc1 .heart {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: absolute; /* Positionnement absolu pour placement précis */
+  top: 0px; /* Positionnement du haut */
+  left: 0px; /* Positionnement de la gauche */
 }
 
-.heart-bloc:hover > .heart, .heart-bloc1:hover > .heart {
-  opacity: 0;
-  transition: opacity 300ms;
-  transition-delay: 200ms;
-}
-
+/* Animation et transition lors du survol du cœur */
 .heart-bloc:hover > .heart-gradient, .heart-bloc1:hover > .heart-gradient {
-  opacity: 1;
-  transition: opacity 500ms;
-  transform-origin: center bottom;
-  animation-name: anim-heart;
-  animation-duration: 500ms;
+  opacity: 1; /* Rendre visible */
+  transition: opacity 500ms; /* Transition d'opacité */
+  transform-origin: center bottom; /* Point d'origine de transformation */
+  animation-name: anim-heart; /* Nom de l'animation */
+  animation-duration: 500ms; /* Durée de l'animation */
 }
 
+/* Transition et opacité lors du survol du cœur */
+.heart-bloc:hover > .heart, .heart-bloc1:hover > .heart {
+  opacity: 0; /* Rendre invisible */
+  transition: opacity 300ms; /* Transition d'opacité */
+  transition-delay: 200ms; /* Délai avant le début de la transition */
+}
+
+/* Transition lors de la perte de focus */
 .heart-bloc:not(:focus) > .heart-gradient, .heart-bloc1:not(:focus) > .heart-gradient {
-  transition: opacity 500ms;
+  transition: opacity 500ms; /* Transition d'opacité */
 }
 
 /*******footer*****/
@@ -558,7 +579,7 @@ header .header__arrow {
   border-top-left-radius: 2.5rem;
   margin-top: -4rem;
   background: #f6f6f6;
-  overflow: hidden; /* Ensure content stays within the container */
+  overflow: hidden; 
 }
 
 @media (min-width: 1444px) {
@@ -590,31 +611,38 @@ header .header__arrow {
 }
 
 @keyframes slideIn {
+  /* Définir une animation pour faire glisser le contenu vers le haut tout en augmentant l'opacité */
   0% {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 0; /* Début de l'animation, complètement transparent */
+    transform: translateY(30px); /* Début de l'animation, déplacé de 30px vers le bas */
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Fin de l'animation, complètement opaque */
+    transform: translateY(0); /* Fin de l'animation, position normale */
   }
 }
+
 .menus .container .entry:nth-of-type(1) {
-  animation-delay: 0.5s;
+  /* Appliquer un délai d'animation au premier élément entry */
+  animation-delay: 0.5s; /* Délai de 0,5 seconde avant de commencer l'animation */
 }
 
 .menus .container .entry:nth-of-type(2) {
-  animation-delay: 2s;
+  /* Appliquer un délai d'animation au deuxième élément entry */
+  animation-delay: 2s; /* Délai de 2 secondes avant de commencer l'animation */
 }
 
 .menus .container .entry:nth-of-type(3) {
-  animation-delay: 3.5s;
+  /* Appliquer un délai d'animation au troisième élément entry */
+  animation-delay: 3.5s; /* Délai de 3,5 secondes avant de commencer l'animation */
 }
 
 .menus .container .entry .menu-title {
-  margin: 0;
-  padding-top: 2rem;
+  /* Styles pour le titre du menu à l'intérieur de chaque élément entry */
+  margin: 0; /* Réinitialiser la marge à zéro */
+  padding-top: 2rem; /* Ajouter un remplissage en haut de 2 rem */
 }
+
 
 @media (min-width: 1444px) {
   .menus .container .entry .menu-title {
@@ -742,24 +770,25 @@ header .header__arrow {
 
 /* Par défaut, les ellipses sont désactivées */
 .menu-item {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
+  white-space: normal; /* Permet au texte de s'étendre sur plusieurs lignes */
+  overflow: visible; /* Tout le contenu est visible, même s'il dépasse la boîte */
+  text-overflow: clip; /* Le texte qui dépasse est simplement coupé sans indication visuelle */
 }
 
 /* Pour les écrans de taille smartphone (320px) */
 @media (max-width: 767px) {
   .menu-item.ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap; /* Le texte est affiché sur une seule ligne */
+    overflow: hidden; /* Le contenu qui dépasse est masqué */
+    text-overflow: ellipsis; /* Le texte débordant est remplacé par des points de suspension (...) */
   }
 }
+
 /* À partir de 768px, les ellipses sont supprimées */
 @media (min-width: 768px) {
   .menu-item.ellipsis {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
+    white-space: normal; /* Permet au texte de s'étendre sur plusieurs lignes */
+    overflow: visible; /* Tout le contenu est visible, même s'il dépasse la boîte */
+    text-overflow: clip; /* Le texte qui dépasse est simplement coupé sans indication visuelle */
   }
 }/*# sourceMappingURL=main.css.map */
