@@ -539,27 +539,7 @@ header .header__arrow {
   width: 100%;
 }
 
-header {
-  position: relative;
-}
 
-header h1 {
-  font-family: "Shrikhand";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--White, #fff);
-  color: black;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
-  margin: 0;
-}
-
-header .header__arrow {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
 
 @media (min-width: 768px) {
   .menu-cover img {
