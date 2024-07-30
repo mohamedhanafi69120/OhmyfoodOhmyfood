@@ -662,31 +662,36 @@ header .header__arrow {
   text-overflow: clip;
 }
 
-/* Pour les écrans de taille smartphone (320px) */
+/* Pour les écrans de taille smartphone (320px) jusqu'à 767px */
 @media (max-width: 767px) {
+  /* Appliquer les ellipses aux éléments card-item, p et h3 dans l'entrée de container dans les menus */
   .menus .container .entry .card-item,
   .menus .container .entry .card-item p,
   .menus .container .entry .card-item h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne suivante */
+    overflow: hidden; /* Masquer le texte qui dépasse la largeur du conteneur */
+    text-overflow: ellipsis; /* Ajouter des points de suspension (...) pour indiquer le texte coupé */
   }
 }
+
+/* Classe spécifique pour les paragraphes dans card-item */
 .menus .container .entry .card-item p {
-  margin: 0;
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
+  margin: 0; /* Supprimer les marges par défaut */
+  white-space: normal; /* Permettre au texte de passer à la ligne suivante */
+  overflow: visible; /* Afficher tout le contenu, même s'il dépasse le conteneur */
+  text-overflow: clip; /* Couper le texte sans ajouter de points de suspension */
 }
 
+/* Redéfinir les ellipses pour les paragraphes et les titres (h3) dans card-item pour les écrans jusqu'à 767px */
 @media (max-width: 767px) {
   .menus .container .entry .card-item p,
   .menus .container .entry .card-item h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne suivante */
+    overflow: hidden; /* Masquer le texte qui dépasse la largeur du conteneur */
+    text-overflow: ellipsis; /* Ajouter des points de suspension (...) pour indiquer le texte coupé */
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .menus .container .entry .menu-title {
     margin-left: 10rem;
