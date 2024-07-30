@@ -690,27 +690,3 @@ header .header__arrow {
   border-radius: 50%;
 }
 
-/* Par défaut, les ellipses sont désactivées */
-.menu-item {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-}
-
-/* Pour les écrans de taille smartphone (320px) */
-@media (max-width: 767px) {
-    .menu-item.ellipsis {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-
-/* À partir de 768px, les ellipses sont supprimées */
-@media (min-width: 768px) {
-    .menu-item.ellipsis {
-        white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
-    }
-}

@@ -746,29 +746,4 @@ header .header__arrow {
   color: #99e2d0;
   background: #f6f6f6;
   border-radius: 50%;
-}
-
-/* Par défaut, les ellipses sont désactivées */
-.menu-item {
-  white-space: normal; /* Permet au texte de s'étendre sur plusieurs lignes */
-  overflow: visible; /* Tout le contenu est visible, même s'il dépasse la boîte */
-  text-overflow: clip; /* Le texte qui dépasse est simplement coupé sans indication visuelle */
-}
-
-/* Pour les écrans de taille smartphone (320px) */
-@media (max-width: 767px) {
-  .menu-item.ellipsis {
-    white-space: nowrap; /* Le texte est affiché sur une seule ligne */
-    overflow: hidden; /* Le contenu qui dépasse est masqué */
-    text-overflow: ellipsis; /* Le texte débordant est remplacé par des points de suspension (...) */
-  }
-}
-
-/* À partir de 768px, les ellipses sont supprimées */
-@media (min-width: 768px) {
-  .menu-item.ellipsis {
-    white-space: normal; /* Permet au texte de s'étendre sur plusieurs lignes */
-    overflow: visible; /* Tout le contenu est visible, même s'il dépasse la boîte */
-    text-overflow: clip; /* Le texte qui dépasse est simplement coupé sans indication visuelle */
-  }
 }/*# sourceMappingURL=main.css.map */
