@@ -22,9 +22,7 @@ h4 {
 }
 
 /***********loader******/
-
 @keyframes content-appear {
-  
   0% {
     opacity: 1; /* Début de l'animation, complètement visible */
     transform: scale(1); /* Taille normale */
@@ -34,7 +32,6 @@ h4 {
     transform: scale(0); /* Réduit à zéro */
   }
 }
-
 @keyframes appear {
   /* Définir une animation pour faire apparaître le contenu avec une mise à l'échelle */
   0% {
@@ -44,7 +41,6 @@ h4 {
     transform: scale(1); /* Fin de l'animation, taille normale */
   }
 }
-
 @keyframes textclip {
   /* Définir une animation pour déplacer l'arrière-plan du texte */
   0% {
@@ -54,7 +50,6 @@ h4 {
     background-position: -200% center; /* Position finale du fond, se déplace de 200% */
   }
 }
-
 @keyframes rotate {
   /* Définir une animation pour faire tourner le contenu */
   0% {
@@ -64,7 +59,6 @@ h4 {
     transform: rotate(360deg); /* Fin de l'animation, rotation complète */
   }
 }
-
 .loader {
   /* Styles pour le conteneur de chargement */
   position: fixed; /* Positionnement fixe par rapport à la fenêtre */
@@ -102,7 +96,6 @@ h4 {
     background-position: -300% center; /* Position finale du fond, se déplace de 300% */
   }
 }
-
 /***********header*******/
 header {
   position: relative;
@@ -248,10 +241,18 @@ header .header__arrow {
   justify-content: center;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) {
   .fonctionnement ol {
     display: flex;
     flex-direction: column;
+    margin-right: 1.25rem;
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement ol {
+    display: flex;
+    flex-direction: row;
     margin-right: 1.25rem;
     margin-left: 2rem;
   }
@@ -266,7 +267,7 @@ header .header__arrow {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
   .fonctionnement .title {
     margin-right: 1.25rem;
     margin-left: 2rem;
@@ -276,7 +277,7 @@ header .header__arrow {
   padding: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .section-title {
     margin-left: 10.25rem;
   }
@@ -295,7 +296,7 @@ header .header__arrow {
   color: #9356dc;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) {
   .fonctionnement h3 {
     font-size: 15px;
   }
@@ -370,7 +371,7 @@ header .header__arrow {
   max-width: 1200px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1024px) {
   .restaurent_card {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -392,7 +393,6 @@ header .header__arrow {
 }
 
 /* ********** Les blocs de cœur ********** */
-
 /* Style de base pour les blocs contenant les cœurs */
 .heart-bloc, .heart-bloc1 {
   width: 22px; /* Largeur du bloc */
@@ -442,7 +442,6 @@ header .header__arrow {
   animation-duration: 500ms; /* Durée de l'animation */
 }
 
-
 /*******footer*****/
 .footer {
   width: 100%;
@@ -452,7 +451,7 @@ header .header__arrow {
   font-family: "";
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .footer {
     display: flex;
     align-items: center;
@@ -478,18 +477,12 @@ header .header__arrow {
     margin: 0;
   }
 }
-@media all and (min-width: 768px) {
-  .footer__logo {
-    width: 137px;
-    margin: 0;
-  }
-}
 .footer__bloc {
   display: flex;
   flex-direction: column;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .footer__bloc {
     flex-direction: row;
     align-items: center;
@@ -503,7 +496,7 @@ header .header__arrow {
   gap: 7px;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .footer__nav {
     width: 190px;
   }
@@ -517,18 +510,16 @@ header .header__arrow {
   font-size: 13px;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 1024px) {
   .footer__nav--info p {
     width: 112px;
     height: 20px;
   }
 }
-/*********les 4 menu restaurants*****************/
+/*********les 4 menu restaurants***************/
 .menu-cover {
   width: 100%;
 }
-
-
 
 @media (min-width: 768px) {
   .menu-cover img {
@@ -548,7 +539,7 @@ header .header__arrow {
   border-top-left-radius: 2.5rem;
   margin-top: -4rem;
   background: #f6f6f6;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 @media (min-width: 1444px) {
@@ -590,7 +581,6 @@ header .header__arrow {
     transform: translateY(0); /* Fin de l'animation, position normale */
   }
 }
-
 .menus .container .entry:nth-of-type(1) {
   /* Appliquer un délai d'animation au premier élément entry */
   animation-delay: 0.5s; /* Délai de 0,5 seconde avant de commencer l'animation */
@@ -611,7 +601,6 @@ header .header__arrow {
   margin: 0; /* Réinitialiser la marge à zéro */
   padding-top: 2rem; /* Ajouter un remplissage en haut de 2 rem */
 }
-
 
 @media (min-width: 1444px) {
   .menus .container .entry .menu-title {
@@ -651,37 +640,27 @@ header .header__arrow {
   text-overflow: clip;
 }
 
+/******** partie ellipsis small device ******/
 /* Pour les écrans de taille smartphone (320px) jusqu'à 767px */
-@media (max-width: 767px) {
-  /* Appliquer les ellipses aux éléments card-item, p et h3 dans l'entrée de container dans les menus */
-  .menus .container .entry .card-item,
+/* Appliquer les styles de base pour les écrans de petite taille (320px) */
+.menus .container .entry .card-item,
+.menus .container .entry .card-item p,
+.menus .container .entry .card-item h3 {
+  white-space: nowrap; /* Empêcher le texte de passer à la ligne suivante */
+  overflow: hidden; /* Masquer le texte qui dépasse la largeur du conteneur */
+  text-overflow: ellipsis; /* Ajouter des points de suspension (...) pour indiquer le texte coupé */
+}
+
+/* Pour les écrans à partir de 768px et plus */
+@media (min-width: 768px) {
   .menus .container .entry .card-item p,
   .menus .container .entry .card-item h3 {
-    white-space: nowrap; /* Empêcher le texte de passer à la ligne suivante */
-    overflow: hidden; /* Masquer le texte qui dépasse la largeur du conteneur */
-    text-overflow: ellipsis; /* Ajouter des points de suspension (...) pour indiquer le texte coupé */
+    white-space: normal; /* Permettre au texte de passer à la ligne suivante */
+    overflow: visible; /* Afficher tout le contenu, même s'il dépasse le conteneur */
+    text-overflow: clip; /* Couper le texte sans ajouter de points de suspension */
   }
 }
-
-/* Classe spécifique pour les paragraphes dans card-item */
-.menus .container .entry .card-item p {
-  margin: 0; /* Supprimer les marges par défaut */
-  white-space: normal; /* Permettre au texte de passer à la ligne suivante */
-  overflow: visible; /* Afficher tout le contenu, même s'il dépasse le conteneur */
-  text-overflow: clip; /* Couper le texte sans ajouter de points de suspension */
-}
-
-/* Redéfinir les ellipses pour les paragraphes et les titres (h3) dans card-item pour les écrans jusqu'à 767px */
-@media (max-width: 767px) {
-  .menus .container .entry .card-item p,
-  .menus .container .entry .card-item h3 {
-    white-space: nowrap; /* Empêcher le texte de passer à la ligne suivante */
-    overflow: hidden; /* Masquer le texte qui dépasse la largeur du conteneur */
-    text-overflow: ellipsis; /* Ajouter des points de suspension (...) pour indiquer le texte coupé */
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .menus .container .entry .menu-title {
     margin-left: 10rem;
     margin-right: 10rem;
@@ -740,4 +719,4 @@ header .header__arrow {
   color: #99e2d0;
   background: #f6f6f6;
   border-radius: 50%;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

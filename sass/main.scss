@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'animation';
 @import 'variables';
 
@@ -23,29 +24,6 @@ h4 {
   margin: 0;
 }
 
-/***********header*******/
-
-header {
-  position: relative;
-}
-
-header h1 {
-  font-family: "Shrikhand";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--White, #fff);
-  color: black;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
-  margin: 0;
-}
-
-header .header__arrow {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
- }
 
 /*****Booking*******/
 
@@ -105,7 +83,6 @@ header .header__arrow {
   box-shadow: 0 4px 10px 0 #afafaf;
 }
 
-
 /****localisation******/
 
 .info__location {
@@ -129,7 +106,6 @@ header .header__arrow {
 }
 
 /************fonctionnement***********/
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -165,7 +141,6 @@ header .header__arrow {
     padding: 3rem 2rem;
   }
 }
-
 .fonctionnement ol {
   list-style: none;
   padding: 0;
@@ -174,10 +149,19 @@ header .header__arrow {
   justify-content: center;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) {
   .fonctionnement ol {
     display: flex;
     flex-direction: column;
+    margin-right: 1.25rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fonctionnement ol {
+    display: flex;
+    flex-direction: row;
     margin-right: 1.25rem;
     margin-left: 2rem;
   }
@@ -193,7 +177,7 @@ header .header__arrow {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
   .fonctionnement .title {
     margin-right: 1.25rem;
     margin-left: 2rem;
@@ -203,12 +187,11 @@ header .header__arrow {
   padding: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .section-title {
     margin-left: 10.25rem;
   }
 }
-
 .fonctionnement li i {
   color: black;
   padding: 0.5rem;
@@ -223,14 +206,12 @@ header .header__arrow {
   color: #9356dc;
 }
 
-@media (max-width: 768px) {
-
-.fonctionnement h3 {
-  font-size: 15px;
+@media (min-width: 320px) {
+  .fonctionnement h3 {
+    font-size: 15px;
+  }
 }
- }
 /****************RESTAURANT**************/
-
 .restaurent {
   background-color: #f6f6f6;
   width: 100%;
@@ -300,14 +281,13 @@ header .header__arrow {
   max-width: 1200px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1024px) {
   .restaurent_card {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 0 auto;
   }
 }
-
 @media (min-width: 1440px) {
   .restaurent_card {
     grid-template-columns: repeat(2, 1fr);
@@ -315,7 +295,6 @@ header .header__arrow {
     margin: 0 auto;
   }
 }
-
 .restaurent .title {
   padding: 20px;
   max-width: 1200px;
@@ -323,59 +302,55 @@ header .header__arrow {
   font-size: 22px;
 }
 
-/************les heart *************/
+/* ********** Les blocs de cœur ********** */
 
+/* Style de base pour les blocs contenant les cœurs */
 .heart-bloc, .heart-bloc1 {
-  width: 22px;
-  height: 22px;
-  font-size: 22px;
-  position: absolute;
-  cursor: pointer;
+  width: 22px; /* Largeur du bloc */
+  height: 22px; /* Hauteur du bloc */
+  font-size: 22px; /* Taille de la police (pour d'éventuels caractères ou icônes de cœur) */
+  position: absolute; /* Positionnement absolu pour placement précis */
+  cursor: pointer; /* Changement du curseur pour indiquer l'interactivité */
 }
 
+/* Positionnement spécifique pour les cœurs des images */
 .heart-bloc {
-  top: 10px; /* Positionnement spécifique pour les cœurs des images */
-  right: 10px;
+  top: 10px; /* Positionnement du haut */
+  right: 10px; /* Positionnement de la droite */
 }
 
+/* Positionnement spécifique pour les cœurs du titre */
 .heart-bloc1 {
-  top: 25px; /* Positionnement spécifique pour les cœurs du titre */
-  margin-left: 18rem;
+  top: 25px; /* Positionnement du haut */
+  margin-left: 18rem; /* Marge à gauche pour ajuster la position */
 }
 
+/* Gradient appliqué aux cœurs */
 .heart-bloc .heart-gradient, .heart-bloc1 .heart-gradient {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0;
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  position: absolute; /* Positionnement absolu pour placement précis */
+  top: 0px; /* Positionnement du haut */
+  left: 0px; /* Positionnement de la gauche */
+  opacity: 0; /* Initialement transparent */
+  background: linear-gradient(#9356DC, #FF79DA); /* Dégradé de couleurs */
+  -webkit-background-clip: text; /* Clip le fond au texte (support Webkit) */
+  background-clip: text; /* Clip le fond au texte */
+  color: transparent; /* Texte transparent pour voir le dégradé */
 }
 
+/* Style de base pour les icônes de cœur */
 .heart-bloc .heart, .heart-bloc1 .heart {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: absolute; /* Positionnement absolu pour placement précis */
+  top: 0px; /* Positionnement du haut */
+  left: 0px; /* Positionnement de la gauche */
 }
 
-.heart-bloc:hover > .heart, .heart-bloc1:hover > .heart {
-  opacity: 0;
-  transition: opacity 300ms;
-  transition-delay: 200ms;
-}
-
+/* Animation et transition lors du survol du cœur */
 .heart-bloc:hover > .heart-gradient, .heart-bloc1:hover > .heart-gradient {
-  opacity: 1;
-  transition: opacity 500ms;
-  transform-origin: center bottom;
-  animation-name: anim-heart;
-  animation-duration: 500ms;
-}
-
-.heart-bloc:not(:focus) > .heart-gradient, .heart-bloc1:not(:focus) > .heart-gradient {
-  transition: opacity 500ms;
+  opacity: 1; /* Rendre visible */
+  transition: opacity 500ms; /* Transition d'opacité */
+  transform-origin: center bottom; /* Point d'origine de transformation */
+  animation-name: anim-heart; /* Nom de l'animation */
+  animation-duration: 500ms; /* Durée de l'animation */
 }
 
 /*******footer*****/
@@ -385,11 +360,10 @@ header .header__arrow {
   padding: 22px 25px;
   background-color: #404040;
   color: #ffffff;
-
   font-family: "";
-
 }
-@media all and (min-width: 768px) {
+
+@media all and (min-width: 1024px) {
   .footer {
     display: flex;
     align-items: center;
@@ -399,48 +373,50 @@ header .header__arrow {
     gap: 16px;
   }
 }
+
 .footer p {
   margin: 5px 0;
 }
+
 .footer__logo {
   margin: 0 0 16px 0;
   font-size: 18px;
   font-family: "Shrikhand", cursive;
 }
+
 @media all and (min-width: 1024px) {
   .footer__logo {
     width: 137px;
     margin: 0;
   }
 }
-@media all and (min-width: 768px) {
-  .footer__logo {
-    width: 137px;
-    margin: 0;
-  }
-}
+
 .footer__bloc {
   display: flex;
   flex-direction: column;
 }
-@media all and (min-width: 768px) {
+
+@media all and (min-width: 1024px) {
   .footer__bloc {
     flex-direction: row;
     align-items: center;
     gap: 7px;
   }
 }
+
 .footer__nav {
   display: flex;
   align-items: center;
   font-weight: 500;
   gap: 7px;
 }
-@media all and (min-width: 768px) {
+
+@media all and (min-width: 1024px) {
   .footer__nav {
     width: 190px;
   }
 }
+
 .footer__nav--icons {
   display: flex;
   justify-content: center;
@@ -449,40 +425,22 @@ header .header__arrow {
   height: 13px;
   font-size: 13px;
 }
-@media all and (min-width: 768px) {
+
+@media all and (min-width: 1024px) {
   .footer__nav--info p {
     width: 112px;
     height: 20px;
   }
 }
-/*********les 4 menu restaurants*****************/
+
+/*********les 4 menu restaurants***************/
 
 .menu-cover {
   width: 100%;
 }
 
-header {
-  position: relative;
-}
 
-header h1 {
-  font-family: "Shrikhand";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--White, #fff);
-  color: black;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
-  margin: 0;
-}
 
-header .header__arrow {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
- } 
- 
 @media (min-width: 768px) {
   .menu-cover img {
     -o-object-fit: cover;
@@ -501,7 +459,7 @@ header .header__arrow {
   border-top-left-radius: 2.5rem;
   margin-top: -4rem;
   background: #f6f6f6;
-  overflow: hidden; /* Ensure content stays within the container */
+  overflow: hidden; 
 }
 
 @media (min-width: 1444px) {
@@ -533,32 +491,38 @@ header .header__arrow {
 }
 
 @keyframes slideIn {
+  /* Définir une animation pour faire glisser le contenu vers le haut tout en augmentant l'opacité */
   0% {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 0; /* Début de l'animation, complètement transparent */
+    transform: translateY(30px); /* Début de l'animation, déplacé de 30px vers le bas */
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Fin de l'animation, complètement opaque */
+    transform: translateY(0); /* Fin de l'animation, position normale */
   }
 }
 
 .menus .container .entry:nth-of-type(1) {
-  animation-delay: 0.5s;
+  /* Appliquer un délai d'animation au premier élément entry */
+  animation-delay: 0.5s; /* Délai de 0,5 seconde avant de commencer l'animation */
 }
 
 .menus .container .entry:nth-of-type(2) {
-  animation-delay: 2s;
+  /* Appliquer un délai d'animation au deuxième élément entry */
+  animation-delay: 2s; /* Délai de 2 secondes avant de commencer l'animation */
 }
 
 .menus .container .entry:nth-of-type(3) {
-  animation-delay: 3.5s;
+  /* Appliquer un délai d'animation au troisième élément entry */
+  animation-delay: 3.5s; /* Délai de 3,5 secondes avant de commencer l'animation */
 }
 
 .menus .container .entry .menu-title {
-  margin: 0;
-  padding-top: 2rem;
+  /* Styles pour le titre du menu à l'intérieur de chaque élément entry */
+  margin: 0; /* Réinitialiser la marge à zéro */
+  padding-top: 2rem; /* Ajouter un remplissage en haut de 2 rem */
 }
+
 
 @media (min-width: 1444px) {
   .menus .container .entry .menu-title {
@@ -597,58 +561,48 @@ header .header__arrow {
   overflow: visible;
   text-overflow: clip;
 }
+/******** partie ellipsis small device ******/
 
-/* Pour les écrans de taille smartphone (320px) */
-@media (max-width: 767px) {
-    .menus .container .entry .card-item,
-    .menus .container .entry .card-item p,
-    .menus .container .entry .card-item h3 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+/* Pour les écrans de taille smartphone (320px) jusqu'à 767px */
+/* Appliquer les styles de base pour les écrans de petite taille (320px) */
+.menus .container .entry .card-item,
+.menus .container .entry .card-item p,
+.menus .container .entry .card-item h3 {
+  white-space: nowrap; /* Empêcher le texte de passer à la ligne suivante */
+  overflow: hidden; /* Masquer le texte qui dépasse la largeur du conteneur */
+  text-overflow: ellipsis; /* Ajouter des points de suspension (...) pour indiquer le texte coupé */
 }
 
-.menus .container .entry .card-item p {
-  margin: 0;
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
+/* Pour les écrans à partir de 768px et plus */
+@media (min-width: 768px) {
+  .menus .container .entry .card-item p,
+  .menus .container .entry .card-item h3 {
+    white-space: normal; /* Permettre au texte de passer à la ligne suivante */
+    overflow: visible; /* Afficher tout le contenu, même s'il dépasse le conteneur */
+    text-overflow: clip; /* Couper le texte sans ajouter de points de suspension */
+  }
 }
 
-@media (max-width: 767px) {
-    .menus .container .entry .card-item p,
-    .menus .container .entry .card-item h3 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px)  {
   .menus .container .entry .menu-title {
     margin-left: 10rem;
     margin-right: 10rem;
   }
-
   .menus .container .entry .card {
     margin-left: 10rem;
     margin-right: 10rem;
   }
 }
-
 @media (min-width: 1024px) {
   .menus .container .entry .menu-title {
     margin-left: 13rem;
     margin-right: 13rem;
   }
-
   .menus .container .entry .card {
     margin-left: 13rem;
     margin-right: 13rem;
   }
 }
-
 .menus .container .entry .card p,
 .menus .container .entry .card h3 {
   margin: 0;
@@ -688,5 +642,5 @@ header .header__arrow {
   color: #99e2d0;
   background: #f6f6f6;
   border-radius: 50%;
-}
+}/*# sourceMappingURL=main.css.map */
 
