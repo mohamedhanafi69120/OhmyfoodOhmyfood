@@ -442,12 +442,6 @@ header .header__arrow {
   animation-duration: 500ms; /* Durée de l'animation */
 }
 
-/* Transition et opacité lors du survol du cœur */
-.heart-bloc:hover > .heart, .heart-bloc1:hover > .heart {
-  opacity: 0; /* Rendre invisible */
-  transition: opacity 300ms; /* Transition d'opacité */
-  transition-delay: 200ms; /* Délai avant le début de la transition */
-}
 
 
 /*******footer*****/
