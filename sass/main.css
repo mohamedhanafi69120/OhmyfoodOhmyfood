@@ -449,10 +449,6 @@ header .header__arrow {
   transition-delay: 200ms; /* Délai avant le début de la transition */
 }
 
-/* Transition lors de la perte de focus */
-.heart-bloc:not(:focus) > .heart-gradient, .heart-bloc1:not(:focus) > .heart-gradient {
-  transition: opacity 500ms; /* Transition d'opacité */
-}
 
 /*******footer*****/
 .footer {
