@@ -24,9 +24,30 @@ h4 {
   margin: 0;
 }
 
+/***********header*******/
+header {
+  position: relative;
+}
+
+header h1 {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--White, #fff);
+  color: black;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
+  margin: 0;
+}
+
+header .header__arrow {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
 
 /*****Booking*******/
-
 .Booking {
   display: flex;
   flex-direction: column;
@@ -105,7 +126,7 @@ h4 {
   width: 128px;
 }
 
-/************fonctionnement***********/
+/************fonctionnement**********/
 .container {
   width: 100%;
   max-width: 1200px;
@@ -153,8 +174,7 @@ h4 {
   .fonctionnement ol {
     display: flex;
     flex-direction: column;
-    margin-right: 1.25rem;
-    margin-left: 2rem;
+    
   }
 }
 
@@ -162,8 +182,7 @@ h4 {
   .fonctionnement ol {
     display: flex;
     flex-direction: row;
-    margin-right: 1.25rem;
-    margin-left: 2rem;
+   
   }
 }
 
@@ -177,12 +196,7 @@ h4 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 767px) {
-  .fonctionnement .title {
-    margin-right: 1.25rem;
-    margin-left: 2rem;
-  }
-}
+
 .section-title {
   padding: 1rem;
 }
@@ -215,7 +229,6 @@ h4 {
 .restaurent {
   background-color: #f6f6f6;
   width: 100%;
-  padding: 40px 0;
 }
 
 .restaurent_card .new {
@@ -302,8 +315,6 @@ h4 {
   font-size: 22px;
 }
 
-/* ********** Les blocs de cœur ********** */
-
 /* Style de base pour les blocs contenant les cœurs */
 .heart-bloc, .heart-bloc1 {
   width: 22px; /* Largeur du bloc */
@@ -354,7 +365,6 @@ h4 {
 }
 
 /*******footer*****/
-
 .footer {
   width: 100%;
   padding: 22px 25px;
@@ -373,7 +383,6 @@ h4 {
     gap: 16px;
   }
 }
-
 .footer p {
   margin: 5px 0;
 }
@@ -390,7 +399,6 @@ h4 {
     margin: 0;
   }
 }
-
 .footer__bloc {
   display: flex;
   flex-direction: column;
@@ -403,7 +411,6 @@ h4 {
     gap: 7px;
   }
 }
-
 .footer__nav {
   display: flex;
   align-items: center;
@@ -416,7 +423,6 @@ h4 {
     width: 190px;
   }
 }
-
 .footer__nav--icons {
   display: flex;
   justify-content: center;
@@ -432,14 +438,10 @@ h4 {
     height: 20px;
   }
 }
-
 /*********les 4 menu restaurants***************/
-
 .menu-cover {
   width: 100%;
 }
-
-
 
 @media (min-width: 768px) {
   .menu-cover img {
@@ -459,7 +461,7 @@ h4 {
   border-top-left-radius: 2.5rem;
   margin-top: -4rem;
   background: #f6f6f6;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 @media (min-width: 1444px) {
@@ -501,7 +503,6 @@ h4 {
     transform: translateY(0); /* Fin de l'animation, position normale */
   }
 }
-
 .menus .container .entry:nth-of-type(1) {
   /* Appliquer un délai d'animation au premier élément entry */
   animation-delay: 0.5s; /* Délai de 0,5 seconde avant de commencer l'animation */
@@ -522,7 +523,6 @@ h4 {
   margin: 0; /* Réinitialiser la marge à zéro */
   padding-top: 2rem; /* Ajouter un remplissage en haut de 2 rem */
 }
-
 
 @media (min-width: 1444px) {
   .menus .container .entry .menu-title {
@@ -561,8 +561,8 @@ h4 {
   overflow: visible;
   text-overflow: clip;
 }
-/******** partie ellipsis small device ******/
 
+/******** partie ellipsis small device ******/
 /* Pour les écrans de taille smartphone (320px) jusqu'à 767px */
 /* Appliquer les styles de base pour les écrans de petite taille (320px) */
 .menus .container .entry .card-item,
@@ -582,8 +582,7 @@ h4 {
     text-overflow: clip; /* Couper le texte sans ajouter de points de suspension */
   }
 }
-
-@media (min-width: 768px)  {
+@media (min-width: 767px) {
   .menus .container .entry .menu-title {
     margin-left: 10rem;
     margin-right: 10rem;
@@ -642,5 +641,13 @@ h4 {
   color: #99e2d0;
   background: #f6f6f6;
   border-radius: 50%;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
+
+
+
+
+
+
+
+
 

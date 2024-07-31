@@ -197,7 +197,7 @@ header .header__arrow {
   width: 128px;
 }
 
-/************fonctionnement***********/
+/************fonctionnement**********/
 .container {
   width: 100%;
   max-width: 1200px;
@@ -245,16 +245,12 @@ header .header__arrow {
   .fonctionnement ol {
     display: flex;
     flex-direction: column;
-    margin-right: 1.25rem;
-    margin-left: 2rem;
   }
 }
 @media (min-width: 1024px) {
   .fonctionnement ol {
     display: flex;
     flex-direction: row;
-    margin-right: 1.25rem;
-    margin-left: 2rem;
   }
 }
 .fonctionnement li {
@@ -267,12 +263,6 @@ header .header__arrow {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 767px) {
-  .fonctionnement .title {
-    margin-right: 1.25rem;
-    margin-left: 2rem;
-  }
-}
 .section-title {
   padding: 1rem;
 }
@@ -305,7 +295,6 @@ header .header__arrow {
 .restaurent {
   background-color: #f6f6f6;
   width: 100%;
-  padding: 40px 0;
 }
 
 .restaurent_card .new {
@@ -392,7 +381,6 @@ header .header__arrow {
   font-size: 22px;
 }
 
-/* ********** Les blocs de cœur ********** */
 /* Style de base pour les blocs contenant les cœurs */
 .heart-bloc, .heart-bloc1 {
   width: 22px; /* Largeur du bloc */
@@ -660,7 +648,7 @@ header .header__arrow {
     text-overflow: clip; /* Couper le texte sans ajouter de points de suspension */
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .menus .container .entry .menu-title {
     margin-left: 10rem;
     margin-right: 10rem;
