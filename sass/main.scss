@@ -569,7 +569,7 @@ header .header__arrow {
 }
 
 /* Pour les écrans à partir de 768px et plus */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .menus .container .entry .card-item p,
   .menus .container .entry .card-item h3 {
     white-space: normal; /* Permettre au texte de passer à la ligne suivante */
