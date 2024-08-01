@@ -506,7 +506,7 @@ header .header__arrow {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .menu-cover img {
     -o-object-fit: cover;
     object-fit: cover;
